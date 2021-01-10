@@ -1,0 +1,3 @@
+To provide a guaranteed pre-processing/post-processing around some dynamic central functionality. Allows child classes the ability to override some steps of an algorithm without giving them the ability to change out the entire algorithm.
+
+You have a class hierarchy. And you have some algorithm that you want to implement on the parent class. There is a core step of the algorithm that needs to be dynamic dispatch so that each child class can provide its own behavior. But it is unsafe to call that step directly – there are pre-conditions that must be checked or post-conditions you want to enforce. So you need an interface that guarantees the core is only called from a particular entry point.
